@@ -1,12 +1,18 @@
-//Import style 
+import Routes from "./routes"
+
+//Import style et outils
 import 'bootstrap/dist/css/bootstrap.min.css';
-//Import des compartiment pages et components 
-import Home from './pages/Home';
+import { BrowserRouter } from "react-router-dom";
+
+//Import des compartiment pages
+import Nav from './pages/Nav';
 
 function App() {
   return (
-    <div className="App">
-       <Home /> 
+      <div className="App">
+          <BrowserRouter>
+              <Nav />
+          </BrowserRouter>
     </div>
   );
 }
