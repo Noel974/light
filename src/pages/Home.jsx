@@ -3,7 +3,13 @@ import Form from 'react-bootstrap-Form';
 
 function Home() {
     return (
-        <><>
+        <><><>
+            //A propos
+            <section>
+                <h1>LightMap</h1>
+            </section>
+        </>
+
             //Carousel
             <section>
                 <Carousel>
