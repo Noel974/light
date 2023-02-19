@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import Form from 'react-bootstrap-Form';
+import Form from 'react-bootstrap/Form';
 
 function Home() {
     return (
