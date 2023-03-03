@@ -1,23 +1,48 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
+import { Container, Row, Col } from "react-bootstrap";
+
+import Typewriter from 'typewriter-effect';
+import TrackVisibility from 'react-on-screen';
+
+import headerImg from "../assets/img/logo.png";
 
 function Home() {
     return (
         <><><>
-            //A propos
-            <section>
-                <h1>LightMap</h1>
+            {/*Apropos*/}
+            <section className="home" id="home">
+                <Container>
+                    <Row className="aligh-items-center">
+                        <Col xs={12} md={6} xl={7}>
+
+                            <TrackVisibility>
+                                {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                        <h1>{`LightMapL`}<Typewriter options={{ strings: ['parcours', 'Concepteur', 'Partage'], autoStart: true, loop: true, }} /></h1>
+
+                                    </div>}
+                            </TrackVisibility>
+                        </Col>
+                        <Col xs={12} md={6} xl={5}>
+                            <TrackVisibility>
+                                {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                                        <img src={headerImg} alt="Header Img" />
+                                    </div>}
+                            </TrackVisibility>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
         </>
 
-            //Carousel
-            <section>
-                <Carousel>
+            {/*Caarousel */}
+            <section className="carra">
+                <Carousel className="carrousel">
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=First slide&bg=373940"
-                            alt="First slide" />
+                            className="carimage"/>
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Illuminons vos parcours.Avec l'application LightMap, Concevez simplement vos AFEST et concentrez vous sur l’essentiel.</p>
@@ -25,10 +50,7 @@ function Home() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=Second slide&bg=282c34"
-                            alt="Second slide" />
-
+                            className="carimage"/>
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -36,9 +58,7 @@ function Home() {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=Third slide&bg=20232a"
-                            alt="Third slide" />
+                            className="carimage"/>
 
                         <Carousel.Caption>
                             <h3>Third slide label</h3>
@@ -50,9 +70,9 @@ function Home() {
                 </Carousel>
             </section>
         </><>
-             // Formulaire
-                <section>
-                    <Form>
+                {/*Formulaire*/}
+                <section className="forms">
+                    <Form className="form">
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="name@example.com" />
@@ -66,7 +86,7 @@ function Home() {
                     </Form>
                 </section>
             </></>
-    
+
     );
 }
 

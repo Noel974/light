@@ -1,6 +1,123 @@
+/*Utilis*/
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", "Inter", sans-serif;
+    font-size: 16px;
+}
+
 /*Navbar*/
 .logo {
     width: 40px;
 }
 /*Footer*/
 
+body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #121212 !important;
+    color: #fff !important;
+}
+/************ home Css ************/
+.home {
+    margin-top: 0;
+    padding: 260px 0 100px 0;
+    background-image: url('../assets/fond/fond1.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+    .home .tagline {
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        padding: 8px 10px;
+        background: linear-gradient(90.21deg, rgba(34, 87, 222, 0.363) -5.91%, rgba(47, 139, 189, 0.5) 111.58%);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        font-size: 20px;
+        margin-bottom: 16px;
+        display: inline-block;
+    }
+
+    .home h1 {
+        color:black;
+        font-size: 65px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        line-height: 1;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .home p {
+        color: #B8B8B8;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+        line-height: 1.5em;
+        width: 96%;
+    }
+
+    .home img {
+        animation: updown 5s linear infinite;
+    }
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.txt-rotate > .wrap {
+    border-right: 0.08em solid #666;
+}
+
+/*Auteur*/
+.auteur {
+    justify-content:space-between;
+   background-color:blueviolet;
+   right:150px;
+   bottom: 140px;
+}
+.text-mute {
+    background-color: blueviolet;
+}
+/*Carrousel*/
+.carra {
+    margin-top: 120px;
+}
+.carrousel {
+    background-image: url('../assets/fond/fond2.jpg');
+    border-radius: 64px;
+}
+.carimage {
+    height: 410px;
+}
+.carousel-caption {
+    color: blueviolet;
+    bottom: 50px;
+    left: 180px;
+}
+/*Forms*/
+.forms{
+    margin-top:220px;
+}
+.form {
+    margin-top:220px;
+    background: #FFFFFF;
+    border-radius: 55px;
+    color: #121212;
+    padding: 85px 125px;
+    margin-bottom: 80px;
+    margin-top: -122px;
+}

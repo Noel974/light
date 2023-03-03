@@ -1,85 +1,92 @@
-import {
-    MDBFooter,
-    MDBContainer,
-    MDBCol,
-    MDBRow,
-} from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 function Footer() {
     return (
-        <MDBFooter bgColor='primary' className='text-white text-center text-lg-left'>
-            <MDBContainer className='p-4'>
-                <MDBRow>
-                    <MDBCol lg='6' md='12' className='mb-4 mb-md-0'>
-                        <h5 className='text-uppercase'>Footer Content</h5>
+        <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+            <section className=''>
+                <MDBContainer className='text-center text-md-start mt-5'>
+                    <MDBRow className='mt-3'>
+                        <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
+                            <h6 className='text-uppercase fw-bold mb-4'>
+                                <MDBIcon color='secondary' icon='gem' className='me-3' />
+                                Company name
+                            </h6>
+                            <p>
+                                L’équipe pédagogique de construction des compétences par les AFEST est à votre service..
+                            </p>
+                        </MDBCol>
 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias.
-                            Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam, est
-                            atque cumque eum delectus sint!
-                        </p>
-                    </MDBCol>
+                        <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
+                            <h6 className='text-uppercase fw-bold mb-4'>Nos réseaux</h6>
+                            <p>
+                                <a href='' className='me-4 text-reset'>
+                                    <MDBIcon color='secondary' fab icon='linkedin' />
+                                </a>
+                                Nos Linkedin
+                            </p>
+                            <p>
+                                <a href='' className='me-4 text-reset'>
+                                    <MDBIcon color='secondary' fab icon='facebook-f' />
+                                </a>
+                                Nos facebook
+                            </p>
+                            <p>
+                                <a href='' className='me-4 text-reset'>
+                                    <MDBIcon color='secondary' fab icon='twitter' />
+                                </a>
+                                Nos twitter
+                            </p>
+                        </MDBCol>
 
-                    <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                        <h5 className='text-uppercase'>Links</h5>
+                        <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
+                            <h6 className='text-uppercase fw-bold mb-4'>Nos partenaires</h6>
+                            <p>
+                                <a href='#!' className='text-reset'>
+                                    Afest
+                                </a>
+                            </p>
+                            <p>
+                                <a href='#!' className='text-reset'>
+                                    Settings
+                                </a>
+                            </p>
+                            <p>
+                                <a href='#!' className='text-reset'>
+                                    Orders
+                                </a>
+                            </p>
+                            <p>
+                                <a href='#!' className='text-reset'>
+                                    Help
+                                </a>
+                            </p>
+                        </MDBCol>
 
-                        <ul className='list-unstyled mb-0'>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 2
-                                </a>
-                            </li>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 3
-                                </a>
-                            </li>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 4
-                                </a>
-                            </li>
-                        </ul>
-                    </MDBCol>
+                        <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
+                            <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+                            <p>
+                                <MDBIcon color='secondary' icon='home' className='me-2' />
+                                Albi 81000
+                            </p>
+                            <p>
+                                <MDBIcon color='secondary' icon='envelope' className='me-3' />
+                                info@example.com
+                            </p>
+                            <p>
+                                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
+                            </p>
+                            <p>
+                                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
+                            </p>
+                        </MDBCol>
+                    </MDBRow>
+                </MDBContainer>
+            </section>
 
-                    <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                        <h5 className='text-uppercase mb-0'>Links</h5>
-
-                        <ul className='list-unstyled'>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 2
-                                </a>
-                            </li>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 3
-                                </a>
-                            </li>
-                            <li>
-                                <a href='#!' className='text-white'>
-                                    Link 4
-                                </a>
-                            </li>
-                        </ul>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
-
-            <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                &copy; {new Date().getFullYear()} Copyright:{' '}
-                <a className='text-white' href='https://mdbootstrap.com/'>
-                    MDBootstrap.com
+            <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+                © 2023 Copyright:
+                <a className='text-reset fw-bold' href=''>
+                    Light MAp
                 </a>
             </div>
         </MDBFooter>
