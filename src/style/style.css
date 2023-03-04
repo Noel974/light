@@ -30,7 +30,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.whrite {
+    margin-top: 50px;
+    color: #361347;
+    font-size: 40px;
+}
     .home .tagline {
         font-weight: 700;
         letter-spacing: 0.8px;
@@ -43,7 +47,7 @@ body {
     }
 
     .home h1 {
-        color:black;
+        color:blueviolet;
         font-size: 65px;
         font-weight: 700;
         letter-spacing: 0.8px;
@@ -92,6 +96,17 @@ body {
 .text-mute {
     background-color: blueviolet;
 }
+/*Propos*/
+.propos {
+    padding: 0 0 50px 0;
+    position: relative;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: 10px;
+    color:black;
+}
+
 /*Carrousel*/
 .carra {
     margin-top: 120px;
@@ -109,15 +124,7 @@ body {
     left: 180px;
 }
 /*Forms*/
-.forms{
-    margin-top:220px;
-}
-.form {
-    margin-top:220px;
-    background: #FFFFFF;
-    border-radius: 55px;
-    color: #121212;
-    padding: 85px 125px;
-    margin-bottom: 80px;
-    margin-top: -122px;
+.p-5image {
+    background-image: url('../assets/fond/fond3.jpg');
+    height: 300px;
 }

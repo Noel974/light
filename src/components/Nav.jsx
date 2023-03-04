@@ -1,19 +1,54 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import {
+    MDBNavbar,
+    MDBContainer,
+    MDBIcon,
+    MDBNavbarNav,
+    MDBNavbarItem,
+    MDBNavbarLink,
+    MDBNavbarToggler,
+    MDBCollapse,
+    MDBNavbarBrand
+} from 'mdb-react-ui-kit';
 import Logo from '../assets/img/logo.png'
-    ;
-function Navi () {
+import { useState } from 'react';
+function Navi() {
+    const [showNavRight, setShowNavRight] = useState(false);
+
     return (
-        <Navbar bg="light" variant="light" >
-            <Container>
-                <Navbar.Brand href="/"><img className="logo" src={Logo} alt="Logo Light Map" /></Navbar.Brand>
-                <Nav className='mb-2 mb-lg-0'>
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/Dashboard">Connection</Nav.Link>
-                </Nav>
-            </Container>
-        </Navbar>
+        <MDBNavbar expand='lg' light bgColor='light'>
+            <MDBContainer fluid>
+                <MDBNavbarBrand href="/"><img className="logo" src={Logo} alt="Logo Light Map" /></MDBNavbarBrand>
+                <MDBNavbarToggler
+                    type='button'
+                    data-target='#navbarRightAlignExample'
+                    aria-controls='navbarRightAlignExample'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                    onClick={() => setShowNavRight(!showNavRight)}
+                >
+                    <MDBIcon icon='bars' fas />
+                </MDBNavbarToggler>
+
+                <MDBCollapse navbar show={showNavRight}>
+                    <MDBNavbarNav right fullWidth={false} className='mb-2 mb-lg-0'>
+                        <MDBNavbarItem>
+                            <MDBNavbarLink active aria-current='page' href='/'>
+                                Home
+                            </MDBNavbarLink>
+                        </MDBNavbarItem>
+                        <MDBNavbarItem>
+                            <MDBNavbarLink href='/Dasboard'>Connecter</MDBNavbarLink>
+                        </MDBNavbarItem>
+
+                        <MDBNavbarItem>
+                            <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
+                                Disabled
+                            </MDBNavbarLink>
+                        </MDBNavbarItem>
+                    </MDBNavbarNav>
+                </MDBCollapse>
+            </MDBContainer>
+        </MDBNavbar>
     );
 }
 export default Navi;
